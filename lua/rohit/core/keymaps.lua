@@ -6,7 +6,8 @@ local keymap = vim.keymap -- for simplicity
 -- general keymaps
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- To clear search highlights
 
-keymap.set("n", "x", "_x") -- Does not copy letter to register when deleting
+keymap.set("n", "x", "x")
+-- keymap.set("n", "x", "_x") -- Does not copy letter to register when deleting
 
 keymap.set("n", "<leader>+", "<C-a>") -- Increment number under cursor
 keymap.set("n", "<leader>-", "<C-x>") -- Decrement number under cursor
@@ -22,10 +23,10 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<Tab>", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<S-Tab>", ":tabp<CR>") --  go to previou
+-- keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
+keymap.set("n", "<leader>bx", ":BufferClose<CR>") -- close current tab
+keymap.set("n", "<Tab>", ":BufferNext<CR>") --  go to next tab
+keymap.set("n", "<S-Tab>", ":BufferPrevious<CR>") --  go to previou
 
 -- window cycling
 keymap.set("n", "<leader>jl", ":wincmd l<CR>") -- Cycle right
